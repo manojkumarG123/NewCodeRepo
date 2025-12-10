@@ -18,7 +18,7 @@ import java.util.List;
 public class LoginController {
     @Autowired
     private LogInService logInService;
-    @GetMapping("/logIn")
+    @GetMapping("/logInn")
     public List<LogInResponse> logIn() {
         return logInService.getallLogInDetails();
     }
@@ -26,11 +26,11 @@ public class LoginController {
     public LogInResponse logIn(@PathVariable Long id) {
         return logInService.getLogInDetailsById(id);
     }
-    @PostMapping("/logIn")
+    @PostMapping("/logInn")
     public LogInResponse createLogIn(@RequestBody LogInRequest logInRequest) throws CustomerNotFoundException {
         return logInService.createLogInUser(logInRequest);
     }
-    @GetMapping("/customerr")
+    @GetMapping("/customer")
     public List<CustomerResponse> customer() {
         return logInService.getAllCustomers();
     }
