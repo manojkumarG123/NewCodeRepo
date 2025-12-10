@@ -30,7 +30,7 @@ public class LoginController {
     public LogInResponse createLogIn(@RequestBody LogInRequest logInRequest) throws CustomerNotFoundException {
         return logInService.createLogInUser(logInRequest);
     }
-    @GetMapping("/customer")
+    @GetMapping("/customerr")
     public List<CustomerResponse> customer() {
         return logInService.getAllCustomers();
     }
